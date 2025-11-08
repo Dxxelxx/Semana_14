@@ -1,0 +1,771 @@
+{
+	"info": {
+		"_postman_id": "d857033c-0223-4681-ad46-c4f5cfe91ef4",
+		"name": "API Projects - Tasks - People",
+		"description": "Colección generada a partir del contrato API (Projects, Tasks, People).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49019603",
+		"_collection_link": "https://dxxelxx-8636254.postman.co/workspace/dxxelxx's-Workspace~57c66cf6-66eb-40b2-8537-621e4c33a712/collection/49019603-d857033c-0223-4681-ad46-c4f5cfe91ef4?action=share&source=collection_link&creator=49019603"
+	},
+	"item": [
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "GET /api/v1/projects/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								""
+							]
+						},
+						"description": "Lista todos los proyectos"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Mint\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET /api/v1/projects/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						},
+						"description": "Obtiene un proyecto"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"id\": 1,\n  \"name\": \"Mint\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST /api/v1/projects/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Mint\",\n  \"description\": \"App Dental\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								""
+							]
+						},
+						"description": "Crea un nuevo proyecto"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"message\": \"Proyecto creado\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT /api/v1/projects/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Nuevo nombre\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						},
+						"description": "Actualiza un proyecto"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"message\": \"Proyecto actualizado\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE /api/v1/projects/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						},
+						"description": "Elimina un proyecto"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"message\": \"Proyecto eliminado\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "GET /api/v1/tasks/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/tasks/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								""
+							]
+						},
+						"description": "Lista todas las tareas"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": 1,\n    \"title\": \"Dise\\u00f1ar UI\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET /api/v1/tasks/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/tasks/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						},
+						"description": "Obtiene una tarea"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"id\": 1,\n  \"title\": \"Dise\\u00f1ar UI\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST /api/v1/tasks/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Dise\\u00f1ar UI\",\n  \"description\": \"...\",\n  \"projectId\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/tasks/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								""
+							]
+						},
+						"description": "Crea una nueva tarea"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"message\": \"Tarea creada\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT /api/v1/tasks/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": \"done\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/tasks/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						},
+						"description": "Actualiza una tarea"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"message\": \"Tarea actualizada\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE /api/v1/tasks/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/tasks/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						},
+						"description": "Elimina una tarea"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"message\": \"Tarea eliminada\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "People",
+			"item": [
+				{
+					"name": "GET /api/v1/people/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/people/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"people",
+								""
+							]
+						},
+						"description": "Lista todas las personas"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": 1,\n    \"name\": \"James\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET /api/v1/people/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/people/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"people",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						},
+						"description": "Obtiene una persona"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"id\": 1,\n  \"name\": \"James\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST /api/v1/people/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"James\",\n  \"email\": \"j@correo.com\",\n  \"role\": \"Dev\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/people/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"people",
+								""
+							]
+						},
+						"description": "Crea una persona"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"message\": \"Persona creada\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT /api/v1/people/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"role\": \"QA\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/people/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"people",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						},
+						"description": "Actualiza una persona"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"message\": \"Persona actualizada\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE /api/v1/people/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/people/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"people",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						},
+						"description": "Elimina una persona"
+					},
+					"response": [
+						{
+							"name": "Ejemplo de respuesta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"message\": \"Persona eliminada\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
